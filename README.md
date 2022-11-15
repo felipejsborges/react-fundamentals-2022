@@ -13,6 +13,11 @@
 	- body { background, color }
 	- body, input, textarea, button { font-family, weight, size }. It does not inherit body font styling
 - Develop the UI
+	[X] Header
+	[X] Sidebar
+	[ ] Post List
+	[ ] Comments form
+	[ ] Comments list
 
 ### Run locally
 
