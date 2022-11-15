@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: #ffffff;
+	--green: #00875f;
+	--green-light: #00b37e;
+	--gray1-bg: #121214;
+	--gray2-card: #202024;
+	--gray3-divider: #323238;
+	--gray4-pholder: #7c7c8a;
+	--gray5-text2: #8d8d99;
+	--gray6-text: #c4c4cc;
+	--gray7-title: #e1e1e6;
+	--red-danger: #f75a68;
+}
+
+body {
+	background: var(--gray1-bg);
+	color: var(--gray6-text);
+}
+
+body, input, textarea, button {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 160%;
+}

@@ -1,0 +1,98 @@
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.25rem 0;
+	background: var(--gray2-card);
+	height: 4rem;
+}
+
+header img {
+	width: 2rem;
+}
+
+header span {
+	color: var(--gray7-title);
+	font-weight: 700;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+}
+
+.content {
+	display: flex;
+	padding: 2rem;
+	justify-content: center;
+}
+
+.content aside {
+	height: 18rem;
+	width: 16rem;
+	border-radius: 0.5rem;
+	background: var(--gray2-card);
+}
+
+.content aside .profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content aside .profile .background {
+	height: 4.5rem;
+	width: 100%;
+	border-radius: 0.5rem;
+	object-fit: cover;
+}
+
+.content aside .profile .avatar {
+	height: 3.75rem;
+	width: 3.75rem;
+	margin-top: -1.8rem;
+	background: var(--gray2-card);
+	border: 0.125rem solid var(--green-light);
+	border-radius: 0.5rem;
+	padding: 0.1rem
+}
+
+.content aside .profile .name {
+	font-weight: 700;
+	color: var(--gray7-title);
+	margin-top: 1rem;
+
+}
+.content aside .profile .vocation {
+	color: var(--gray5-text2);
+	font-size: 0.875rem;
+}
+
+.content aside .linkContainer {
+	margin-top: 1rem;
+	border-top: 0.125rem solid var(--gray3-divider);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+.content aside .linkContainer button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	width: 12rem;
+	height: 3rem;
+	border: 1px solid var(--green-light);
+	color: var(--green-light);
+	background: transparent;
+	border-radius: 8px;
+}
+
+.content main {
+	background: red;
+	width: 40rem;
+	min-height: 18rem;
+	margin-left: 2rem;
+	background: var(--gray2-card);
+}
