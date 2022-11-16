@@ -1,4 +1,4 @@
-header {
+.home > header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -7,11 +7,11 @@ header {
 	height: 4rem;
 }
 
-header img {
+.home > header img {
 	width: 2rem;
 }
 
-header span {
+.home > header span {
 	color: var(--gray7-title);
 	font-weight: 700;
 	font-size: 1.5rem;
@@ -25,7 +25,7 @@ header span {
 }
 
 .content aside {
-	height: 18rem;
+	height: 100%;
 	width: 16rem;
 	border-radius: 0.5rem;
 	background: var(--gray2-card);
@@ -45,13 +45,7 @@ header span {
 }
 
 .content aside .profile .avatar {
-	height: 3.75rem;
-	width: 3.75rem;
 	margin-top: -1.8rem;
-	background: var(--gray2-card);
-	border: 0.125rem solid var(--green-light);
-	border-radius: 0.5rem;
-	padding: 0.1rem
 }
 
 .content aside .profile .name {
@@ -66,13 +60,11 @@ header span {
 }
 
 .content aside .linkContainer {
-	margin-top: 1rem;
-	border-top: 0.125rem solid var(--gray3-divider);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 1.5rem;
+	padding: 0 1.5rem 1.5rem;
 }
 
 .content aside .linkContainer button {
@@ -90,9 +82,7 @@ header span {
 }
 
 .content main {
-	background: red;
 	width: 40rem;
 	min-height: 18rem;
 	margin-left: 2rem;
-	background: var(--gray2-card);
 }

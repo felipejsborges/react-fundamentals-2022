@@ -15,9 +15,10 @@
 - Develop the UI
 	[X] Header
 	[X] Sidebar
-	[ ] Post List
-	[ ] Comments form
+	[X] Post List
+	[X] Comments form
 	[ ] Comments list
+	[ ] Responsive UI
 
 ### Run locally
 

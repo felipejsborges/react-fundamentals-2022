@@ -1,0 +1,8 @@
+.avatar {
+	height: 3.75rem;
+	width: 3.75rem;
+	background: var(--gray2-card);
+	border: 0.125rem solid var(--green-light);
+	border-radius: 0.5rem;
+	padding: 0.1rem
+}
