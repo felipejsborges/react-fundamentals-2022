@@ -1,5 +1,6 @@
 import { Avatar } from '../Avatar'
 import { Divider } from '../Divider'
+import { Comment } from './Comment'
 import styles from './styles.module.css'
 
 export function Post() {
@@ -38,6 +39,11 @@ export function Post() {
 					Publicar
 				</button>
 			</footer>
+			<div className={styles.commentsList}>
+				<Comment />
+				<Comment />
+				<Comment />
+			</div>
 		</div>
 	)
 }

@@ -17,8 +17,12 @@
 	[X] Sidebar
 	[X] Post List
 	[X] Comments form
-	[ ] Comments list
-	[ ] Responsive UI
+	[X] Comments list
+	[X] Responsive UI
+	[ ] Fake API
+		[ ] Posts CRUD
+		[ ] Comments CRUD
+	[ ] Handle dates
 
 ### Run locally
 

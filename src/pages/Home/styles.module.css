@@ -78,11 +78,28 @@
 	border: 1px solid var(--green-light);
 	color: var(--green-light);
 	background: transparent;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 }
 
-.content main {
+.content > main {
 	width: 40rem;
 	min-height: 18rem;
 	margin-left: 2rem;
+}
+
+@media (max-width: 800px) {
+	.content {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.content aside {
+		width: 100%;
+	}
+
+	.content main {
+		width: 100%;
+		margin-top: 2rem;
+		margin-left: 0;
+	}
 }

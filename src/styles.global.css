@@ -8,6 +8,7 @@
 	--white: #ffffff;
 	--green: #00875f;
 	--green-light: #00b37e;
+	--gray0-bg-light: #29292E;
 	--gray1-bg: #121214;
 	--gray2-card: #202024;
 	--gray3-divider: #323238;
@@ -28,4 +29,11 @@ body, input, textarea, button {
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 160%;
+}
+
+
+@media (max-width: 800px) {
+  body, input, textarea, button {
+		font-size: 87.5%;
+	}
 }

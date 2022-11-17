@@ -1,0 +1,93 @@
+.comment {
+	display: flex;
+}
+
+.comment + .comment {
+	margin-top: 1.5rem;
+}
+
+.comment .commentContainer {
+	width: 100%;
+	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.comment .commentContent {
+	background: var(--gray0-bg-light);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.comment .commentContent header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.comment .commentContent header > svg {
+	cursor: pointer;
+}
+
+.comment .commentContent header > svg:hover {
+	color: var(--red-danger)
+}
+
+.comment .commentContent header .authorData {
+	display: flex;
+	flex-direction: column;
+}
+
+.comment .commentContent header .authorData strong {
+	font-weight: 700;
+	font-size: 0.875rem;
+	color: var(--gray7-title);
+}
+
+.comment .commentContent header .authorData span {
+	font-size: 0.75rem;
+	color: var(--gray5-text2);
+}
+
+.comment .commentContent main {
+	margin-top: 1rem;
+}
+
+.comment .reaction {
+	margin-top: 1rem;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	width: fit-content;
+}
+
+.comment .reaction:hover {
+	color: var(--green-light);
+}
+
+.comment .reaction span {
+	margin-left: 0.625rem;
+}
+
+@media (max-width: 800px) {
+  .comment {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.comment .commentContainer {
+		margin-top: 1rem;
+	}
+
+	.comment .commentContainer header {
+		flex-direction: row;
+	}
+
+	.comment .commentContainer main {
+		text-align: start;
+	}
+
+	.comment .commentContent header .authorData span {
+		text-align: start;
+	}
+}
