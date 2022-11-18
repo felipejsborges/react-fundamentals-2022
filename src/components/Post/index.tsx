@@ -1,35 +1,41 @@
+import { parseDate } from '../../utils/parseDate'
 import { Avatar } from '../Avatar'
 import { Divider } from '../Divider'
-import { Comment } from './Comment'
+import { Comment, IComment } from './Comment'
 import styles from './styles.module.css'
 
-export function Post() {
+export interface IPost {
+	user: {
+		name: string;
+		vocation: string;
+		avatarUrl: string;
+	}
+	createdAt: Date;
+	content: string[];
+	comments: IComment[];
+}
+
+export function Post({ comments, content, createdAt, user }: IPost) {
 	return (
 		<div className={styles.post}>
 			<header>
 				<div className={styles.profile}>
-					<Avatar src="https://github.com/felipejsborges.png" />
+					<Avatar src={user.avatarUrl} />
 					<div className={styles.userData}>
 						<strong>
-							Joanilson Junior
+							{user.name}
 						</strong>
 						<span>
-							Dev Full Stack
+							{user.vocation}
 						</span>
 					</div>
 				</div>
 				<span>
-					Publicado há 3 dias
+					{parseDate(createdAt)}
 				</span>
 			</header>
 			<article>
-				<p>Fala galeraa 👋</p>
-				<br/ >
-				<p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-				<br/ >
-				<p>👉 jane.design/doctorcare</p>
-				<br/ >
-				<p>#novoprojeto #nlw #rocketseat</p>
+				{content.map(line => <p key={line}>{line}</p>)}
 			</article>
 			<Divider />
 			<footer>
@@ -40,9 +46,14 @@ export function Post() {
 				</button>
 			</footer>
 			<div className={styles.commentsList}>
-				<Comment />
-				<Comment />
-				<Comment />
+				{comments.map(comment => (
+					<Comment
+						key={comment.createdAt.toString()}
+						content={comment.content}
+						createdAt={comment.createdAt}
+						likes={comment.likes}
+						user={comment.user}
+					/>))}
 			</div>
 		</div>
 	)

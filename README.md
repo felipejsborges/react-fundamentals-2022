@@ -19,10 +19,8 @@
 	[X] Comments form
 	[X] Comments list
 	[X] Responsive UI
-	[ ] Fake API
-		[ ] Posts CRUD
-		[ ] Comments CRUD
-	[ ] Handle dates
+	[X] Fake API
+	[X] Handle dates
 
 ### Run locally
 
