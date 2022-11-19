@@ -21,6 +21,7 @@
 	[X] Responsive UI
 	[X] Fake API
 	[X] Handle dates
+	[X] Reactivity
 
 ### Run locally
 

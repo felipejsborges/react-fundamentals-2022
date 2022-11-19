@@ -5,6 +5,7 @@ import { Post, IPost } from '../../components/Post'
 import { Avatar } from '../../components/Avatar'
 import { Divider } from '../../components/Divider'
 import { useEffect, useState } from 'react'
+import { IComment } from '../../components/Post/Comment'
 
 interface IUser {
 	name: string;
@@ -28,6 +29,38 @@ export function Home() {
 			.then((response) => response.json())
 			.then((json) => setPosts(json.posts))
 	}, [])
+
+	function handleNewComment(postId: string, content: string) {
+		const updatedPosts = posts.map(post => {
+			if (post.id === postId) {
+				const newId = String((posts.length + 1) * (post.comments.length + 1))
+				const newComment: IComment = {
+					id: newId,
+					content,
+					createdAt: new Date(),
+					likes: 0,
+					user
+				}
+				post.comments.push(newComment)
+				return post
+			}
+			return post
+		})
+		setPosts(updatedPosts)
+	}
+
+	function handleDeleteComment(postId: string, commentId: string) {
+		const postIndex = posts.findIndex(post => post.id === postId)
+		posts[postIndex].comments = posts[postIndex].comments.filter(comment => comment.id !== commentId)
+		setPosts([...posts])
+	}
+
+	function handleLikeComment(postId: string, commentId: string) {
+		const postIndex = posts.findIndex(post => post.id === postId)
+		const commentIndex = posts[postIndex].comments.findIndex(comment => comment.id === commentId)
+		posts[postIndex].comments[commentIndex].likes++
+		setPosts([...posts])
+	}
 
 	return (
 		<div className={styles.home}>
@@ -57,11 +90,15 @@ export function Home() {
 				<main>
 					{posts.map(post => (
 						<Post
-							key={post.createdAt.toString()}
+							key={post.id}
+							id={post.id}
 							user={post.user}
 							createdAt={post.createdAt}
 							content={post.content}
 							comments={post.comments}
+							onNewComment={handleNewComment}
+							onDeleteComment={handleDeleteComment}
+							onLikeComment={handleLikeComment}
 						/>
 					))}
 				</main>
